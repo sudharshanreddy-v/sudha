@@ -1,19 +1,12 @@
 pipeline {
-    agent any 
+    agent any
+    triggers {
+        cron('H */4 * * 1-5')
+    }
     stages {
-        stage('Build') { 
+        stage('Example') {
             steps {
-                // 
-            }
-        }
-        stage('Test') { 
-            steps {
-                // 
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                // 
+                echo 'Hello World'
             }
         }
     }
